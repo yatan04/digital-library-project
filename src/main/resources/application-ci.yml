@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: Digital Library
+
+  datasource:
+    url: jdbc:h2:mem:testdb  # or just remove the entire datasource section
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    jpa:
+      hibernate:
+        ddl-auto: none
+
+  #  data:
+  #    redis:
+  #      host: <your-host>
+  #      port: <your-port>
+  #      password: <your-password> [Optional]
+
+  security:
+    user:
+      name: yatan
+      password: password
+
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: your_client_id_here # for security purpose
+            client-secret: your_client_secret_here # for security purpose
+            scope: read:user
+            redirect-uri: http://localhost:8080/login/oauth2/code/github

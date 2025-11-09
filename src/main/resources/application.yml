@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: Digital Library
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  #  data:
+  #    redis:
+  #      host: <your-host>
+  #      port: <your-port>
+  #      password: <your-password> [Optional]
+
+  security:
+    user:
+      name: yatan
+      password: password
+
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: your_client_id_here # for security purpose
+            client-secret: your_client_secret_here # for security purpose
+            scope: read:user
+            redirect-uri: http://localhost:8080/login/oauth2/code/github
