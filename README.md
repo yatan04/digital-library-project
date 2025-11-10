@@ -1,7 +1,7 @@
 # 📚 Digital Library — Backend
 
 A **Spring Boot–based Digital Library Management System** that integrates **GitHub OAuth2 login**, **Redis caching**, and **PostgreSQL persistence**.  
-Built following clean architecture and layered design principles — developed as part of an advanced backend engineering course.
+Built following clean architecture and layered design principles.
 
 ---
 ## 🚀 Features
